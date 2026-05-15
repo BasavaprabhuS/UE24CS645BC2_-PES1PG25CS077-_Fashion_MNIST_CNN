@@ -39,6 +39,67 @@ Files used:
 - fashion-mnist_test.csv
 
 ---
+# CSV File Details
+
+The Fashion-MNIST dataset was used in CSV format.
+
+Files:
+- `fashion-mnist_train.csv`
+- `fashion-mnist_test.csv`
+
+## CSV Structure
+
+Each row in the CSV file represents one image.
+
+### First Column
+- `label`
+- Represents the clothing category (0–9)
+
+### Remaining 784 Columns
+- Pixel intensity values
+- Correspond to a flattened 28×28 grayscale image
+- Values range from 0 to 255
+
+Example:
+
+| label | pixel1 | pixel2 | ... | pixel784 |
+|---|---|---|---|---|
+| 5 | 0 | 0 | ... | 12 |
+
+---
+
+# Preprocessing Steps
+
+1. CSV files are loaded using Pandas.
+2. Labels are separated from pixel values.
+3. Pixel values are normalized to the range [0,1].
+4. Images are reshaped from:
+   ```text
+   (784,)
+   ```
+   to:
+   ```text
+   (1, 28, 28)
+   ```
+
+---
+
+# Class Labels
+
+| Label | Clothing Category |
+|---|---|
+| 0 | T-shirt/top |
+| 1 | Trouser |
+| 2 | Pullover |
+| 3 | Dress |
+| 4 | Coat |
+| 5 | Sandal |
+| 6 | Shirt |
+| 7 | Sneaker |
+| 8 | Bag |
+| 9 | Ankle boot |
+
+
 
 # CNN Architecture
 
